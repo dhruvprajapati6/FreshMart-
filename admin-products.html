@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Products - Admin FreshMart</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Admin CSS -->
+    <link href="css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="admin-dashboard.html" class="sidebar-brand">
+                    <i class="bi bi-basket2-fill me-2"></i>Fresh<span>Mart</span>
+                </a>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="px-4 py-2 text-muted small fw-bold mt-2">MAIN</li>
+                <li>
+                    <a href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill"></i> Dashboard</a>
+                </li>
+                
+                <li class="px-4 py-2 text-muted small fw-bold mt-3">MANAGEMENT</li>
+                <li>
+                    <a href="admin-products.html" class="active"><i class="bi bi-box-seam"></i> Products</a>
+                </li>
+                <li>
+                    <a href="admin-orders.html"><i class="bi bi-cart-check"></i> Orders</a>
+                </li>
+                <li>
+                    <a href="admin-customers.html"><i class="bi bi-people"></i> Customers</a>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-tags"></i> Categories</a>
+                </li>
+                
+                <li class="px-4 py-2 text-muted small fw-bold mt-3">SETTINGS</li>
+                <li>
+                    <a href="#"><i class="bi bi-gear"></i> Settings</a>
+                </li>
+                <li>
+                    <a href="admin-login.html" class="text-danger"><i class="bi bi-box-arrow-left text-danger"></i> Logout</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="admin-main">
+            
+            <!-- Topbar -->
+            <header class="admin-topbar">
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-light d-lg-none me-3" id="sidebarToggle">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+                    <div class="topbar-search d-none d-md-block">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search here...">
+                    </div>
+                </div>
+                
+                <div class="topbar-actions">
+                    <div class="dropdown">
+                        <div class="admin-profile" data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=00B37E&color=fff" alt="Admin">
+                            <div class="d-none d-md-block">
+                                <span class="d-block fw-bold small text-dark">Admin User</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="admin-content">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="fw-bold mb-0">Manage Products</h4>
+                    <button class="btn btn-primary px-4 shadow-sm" style="background-color: var(--primary-color); border: none;">
+                        <i class="bi bi-plus-lg me-2"></i>Add New Product
+                    </button>
+                </div>
+
+                <!-- Products Table -->
+                <div class="card admin-table-card mb-4">
+                    <div class="card-header bg-white p-4 border-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <div class="d-flex gap-2">
+                            <select class="form-select form-select-sm" style="width: auto;">
+                                <option>Bulk Actions</option>
+                                <option>Delete Selected</option>
+                                <option>Mark Out of Stock</option>
+                            </select>
+                            <button class="btn btn-sm btn-outline-secondary">Apply</button>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <select class="form-select form-select-sm" style="width: auto;">
+                                <option>All Categories</option>
+                                <option>Fruits</option>
+                                <option>Vegetables</option>
+                                <option>Organic</option>
+                            </select>
+                            <input type="text" class="form-control form-control-sm" placeholder="Search products..." style="width: 200px;">
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table admin-table table-hover align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 40px;"><input type="checkbox" class="form-check-input"></th>
+                                        <th>Product Info</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="form-check-input"></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/apple.jpg" alt="Apple" class="rounded me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark">Fresh Organic Apples</h6>
+                                                    <small class="text-muted">SKU: FR-APP-001</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Fruits</td>
+                                        <td class="fw-bold">$150</td>
+                                        <td>150 kg</td>
+                                        <td><span class="status-badge status-delivered">In Stock</span></td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button class="btn btn-sm btn-light"><i class="bi bi-pencil text-primary"></i></button>
+                                                <button class="btn btn-sm btn-light"><i class="bi bi-trash text-danger"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="form-check-input"></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/potato.jpg" alt="Potatoes" class="rounded me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark">Farm Potatoes</h6>
+                                                    <small class="text-muted">SKU: VE-POT-002</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Vegetables</td>
+                                        <td class="fw-bold">$60</td>
+                                        <td>300 kg</td>
+                                        <td><span class="status-badge status-delivered">In Stock</span></td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button class="btn btn-sm btn-light"><i class="bi bi-pencil text-primary"></i></button>
+                                                <button class="btn btn-sm btn-light"><i class="bi bi-trash text-danger"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="form-check-input"></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=50&q=80" alt="Pineapple" class="rounded me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark">Fresh Pineapple</h6>
+                                                    <small class="text-muted">SKU: FR-PIN-003</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Fruits</td>
+                                        <td class="fw-bold">$180</td>
+                                        <td>0 pc</td>
+                                        <td><span class="status-badge status-cancelled">Out of Stock</span></td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button class="btn btn-sm btn-light"><i class="bi bi-pencil text-primary"></i></button>
+                                                <button class="btn btn-sm btn-light"><i class="bi bi-trash text-danger"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white p-3 border-top d-flex justify-content-between align-items-center">
+                        <small class="text-muted">Showing 1 to 3 of 125 entries</small>
+                        <nav>
+                            <ul class="pagination pagination-sm mb-0">
+                                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.body.classList.toggle('sidebar-open');
+        });
+    </script>
+</body>
+</html>
