@@ -52,7 +52,7 @@ This project was developed as an academic project using WAMP Server and Visual S
 
 | Fresh produce catalogue | Shopping cart |
 |---|---|
-| ![FreshMart product catalogue](shop-catalogue.jpg) | ![FreshMart shopping cart](hopping-cart.jpg) |
+| ![FreshMart product catalogue](shop-catalogue.jpg) | ![FreshMart shopping cart](shopping-cart.jpg) |
 
 | Administrator dashboard | Product management |
 |---|---|
