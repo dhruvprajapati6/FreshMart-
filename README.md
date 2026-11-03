@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/screenshots/homepage.jpg" alt="FreshMart home page showing fresh produce and the shopping interface" width="920">
+  <img src="homepage.jpg" alt="FreshMart home page showing fresh produce and the shopping interface" width="920">
   <h1>FreshMart</h1>
   <p><strong>Online Fruits and Vegetables E-Commerce Platform</strong></p>
   <p>Browse fresh produce, manage a cart, place orders, and maintain products through an admin panel.</p>
@@ -52,11 +52,11 @@ This project was developed as an academic project using WAMP Server and Visual S
 
 | Fresh produce catalogue | Shopping cart |
 |---|---|
-| ![FreshMart product catalogue](docs/screenshots/shop-catalogue.jpg) | ![FreshMart shopping cart](docs/screenshots/shopping-cart.jpg) |
+| ![FreshMart product catalogue](shop-catalogue.jpg) | ![FreshMart shopping cart](hopping-cart.jpg) |
 
 | Administrator dashboard | Product management |
 |---|---|
-| ![FreshMart administrator dashboard](docs/screenshots/admin-dashboard.jpg) | ![FreshMart product management](docs/screenshots/product-management.jpg) |
+| ![FreshMart administrator dashboard](admin-dashboard.jpg) | ![FreshMart product management](product-management.jpg) |
 
 ## Workflow
 
