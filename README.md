@@ -1,4 +1,4 @@
-<br> <div align="center"> </br>
+<div align="center">
   <img src="homepage.jpg" alt="FreshMart home page showing fresh produce and the shopping interface" width="920">
   <h1>FreshMart</h1>
   <p><strong>Online Fruits and Vegetables E-Commerce Platform</strong></p>
